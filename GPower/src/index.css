@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "./alt-theme.css";
+
+@theme {
+  --color-primary: #003B73; /* Deep Blue */
+  --color-secondary: #FFD447; /* Vibrant Yellow */
+  --color-accent: #E6F0FA; /* Light Blue */
+  --color-dark: #1A1F25; /* Dark Gray */
+  --color-light: #F8F9FA; /* Light Gray */
+  --color-highlight: #FFA500; /* Orange for accents */
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #002a52 100%);
+  }
+  
+  .btn-accent {
+    @apply bg-[var(--color-secondary)] text-[var(--color-dark)] px-6 py-3 rounded-lg font-bold hover:bg-[#e6bf3e] transition duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-6 py-3 rounded-lg font-bold hover:bg-[var(--color-primary)] hover:text-white transition duration-300;
+  }
+  
+  .card-border {
+    @apply border-l-4 border-[var(--color-secondary)];
+  }
+  
+  .section-padding {
+    @apply py-20;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: var(--color-dark);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
