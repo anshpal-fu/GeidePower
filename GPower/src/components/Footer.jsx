@@ -9,7 +9,7 @@ export default function Footer(){
             <div className="w-10 h-10 rounded-lg bg-[var(--color-secondary)] flex items-center justify-center">
               <div className="w-5 h-5 bg-[var(--color-primary)] rounded-full"></div>
             </div>
-            <div className="text-2xl font-bold">Velocity<span className="text-[var(--color-secondary)]">Parts</span></div>
+            <div className="text-2xl font-bold">Geidel<span className="text-[var(--color-secondary)]">Power</span></div>
           </div>
           <p className="text-gray-300 mb-6">
             Precision manufacturing of high-performance bike and car components for enthusiasts and professionals worldwide.
@@ -78,7 +78,7 @@ export default function Footer(){
 
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-6 py-8 text-gray-400 text-sm flex flex-col md:flex-row justify-between gap-4">
-          <div>© {CONTACT.year} Velocity Parts Co. All rights reserved.</div>
+          <div>© {CONTACT.year} Geidel Power. All rights reserved.</div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[var(--color-secondary)] transition">Privacy Policy</a>
             <a href="#" className="hover:text-[var(--color-secondary)] transition">Terms of Service</a>

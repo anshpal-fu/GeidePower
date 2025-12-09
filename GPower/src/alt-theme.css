@@ -1,21 +1,21 @@
-/* Alternative theme with reversed blue and yellow colors */
+/* Alternative theme with blue and white colors */
 :root.alt-theme {
-  --color-primary: #FFD447; /* Vibrant Yellow */
-  --color-secondary: #003B73; /* Deep Blue */
-  --color-accent: #FFF8E6; /* Light Yellow */
+  --color-primary: #003B73; /* Deep Blue */
+  --color-secondary: #FFFFFF; /* White */
+  --color-accent: #E6F0FA; /* Light Blue */
   --color-dark: #1A1F25; /* Dark Gray */
   --color-light: #F8F9FA; /* Light Gray */
   --color-highlight: #003B73; /* Deep Blue for accents */
 }
 
 .alt-theme .gradient-bg {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #e6bf3e 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #002a52 100%);
 }
 
 .alt-theme .btn-accent {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: white;
-  border: 2px solid var(--color-secondary);
+  border: 2px solid var(--color-primary);
 }
 
 .alt-theme .btn-accent:hover {
@@ -25,12 +25,12 @@
 
 .alt-theme .btn-secondary {
   background-color: white;
-  border: 2px solid var(--color-secondary);
-  color: var(--color-secondary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .alt-theme .btn-secondary:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: white;
 }
 

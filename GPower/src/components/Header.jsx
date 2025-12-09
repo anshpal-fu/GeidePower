@@ -11,31 +11,31 @@ export default function Header(){
       initial={{ y: -20, opacity: 0 }} 
       animate={{ y: 0, opacity: 1 }} 
       transition={{ duration: 0.5 }} 
-      className="w-full bg-white border-b sticky top-0 z-40 shadow-sm"
+      className="w-full bg-white/80 backdrop-blur-xl border-b border-white/20 sticky top-0 z-40 shadow-sm"
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-lg bg-[var(--color-primary)] flex items-center justify-center">
-            <div className="w-6 h-6 bg-[var(--color-secondary)] rounded-full"></div>
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-primary)] to-[#002a52] flex items-center justify-center shadow-lg">
+            <div className="w-6 h-6 bg-[var(--color-secondary)] rounded-full shadow-md"></div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[var(--color-primary)]">Velocity<span className="text-[var(--color-secondary)]">Parts</span></div>
+            <div className="text-2xl font-bold text-[var(--color-primary)]">Geidel<span className="text-[var(--color-secondary)]">Power</span></div>
             <div className="text-xs text-gray-500">Precision Manufacturing</div>
           </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Home</Link>
-          <Link to="/about" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>About</Link>
-          <Link to="/services" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Services</Link>
-          <Link to="/products" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Products</Link>
-          <Link to="/portfolio" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/portfolio" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Portfolio</Link>
-          <Link to="/testimonials" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/testimonials" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Testimonials</Link>
-          <Link to="/faq" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/faq" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>FAQ</Link>
-          <Link to="/blog" className={`hover:text-[var(--color-primary)] ${loc.pathname === "/blog" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Blog</Link>
+          <Link to="/" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Home</Link>
+          <Link to="/about" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>About</Link>
+          <Link to="/services" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Services</Link>
+          <Link to="/products" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Products</Link>
+          <Link to="/portfolio" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/portfolio" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Portfolio</Link>
+          <Link to="/testimonials" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/testimonials" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Testimonials</Link>
+          <Link to="/faq" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/faq" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>FAQ</Link>
+          <Link to="/blog" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/blog" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Blog</Link>
           <button 
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
+            className="p-2 rounded-lg bg-white/50 hover:bg-white/80 transition-all duration-300 border border-gray-200 shadow-sm"
             aria-label="Toggle theme"
           >
             {isAltTheme ? (
@@ -54,7 +54,7 @@ export default function Header(){
         <div className="md:hidden flex items-center gap-4">
           <button 
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
+            className="p-2 rounded-lg bg-white/50 hover:bg-white/80 transition-all duration-300 border border-gray-200 shadow-sm"
             aria-label="Toggle theme"
           >
             {isAltTheme ? (

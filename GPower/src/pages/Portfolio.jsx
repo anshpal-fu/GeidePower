@@ -1,41 +1,47 @@
 import { motion } from "framer-motion";
+import crankshaftImage from "../assets/Crankshaft - six cylinders seven mains.jpg";
+import oilPumpImage from "../assets/Wet sump oil pump.jpg";
+import turbochargerImage from "../assets/Turbocharger with waste gate.jpg";
+import superchargerImage from "../assets/Whipple supercharger.jpg";
+import ossaMotorcycleImage from "../assets/Ossa Trials Motorcycle 1970s.jpg";
+import geidelPoweredImage from "../assets/Powered by Geidel.jpg";
 
 const portfolioItems = [
   {
     id: 1,
     title: "Carbon Fiber Racing Bike Frame",
     category: "Bike Parts",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+    image: ossaMotorcycleImage
   },
   {
     id: 2,
     title: "Performance Brake Caliper Set",
     category: "Car Parts",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
+    image: turbochargerImage
   },
   {
     id: 3,
     title: "Forged Alloy Wheel Set",
     category: "Universal",
-    image: "https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=800&auto=format&fit=crop"
+    image: superchargerImage
   },
   {
     id: 4,
     title: "Turbocharger Housing",
     category: "Car Parts",
-    image: "https://images.unsplash.com/photo-1543082558-485707dae1f4?q=80&w=800&auto=format&fit=crop"
+    image: turbochargerImage
   },
   {
     id: 5,
     title: "Mountain Bike Suspension Fork",
     category: "Bike Parts",
-    image: "https://images.unsplash.com/photo-1507151230097-015838b9cb77?q=80&w=800&auto=format&fit=crop"
+    image: oilPumpImage
   },
   {
     id: 6,
     title: "Engine Mounting System",
     category: "Car Parts",
-    image: "https://images.unsplash.com/photo-1545997945-70ed5d20c6ff?q=80&w=800&auto=format&fit=crop"
+    image: geidelPoweredImage
   }
 ];
 

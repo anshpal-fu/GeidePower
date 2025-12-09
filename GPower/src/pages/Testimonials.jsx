@@ -1,4 +1,10 @@
 import { motion } from "framer-motion";
+import crankshaftImage from "../assets/Crankshaft - six cylinders seven mains.jpg";
+import oilPumpImage from "../assets/Wet sump oil pump.jpg";
+import turbochargerImage from "../assets/Turbocharger with waste gate.jpg";
+import superchargerImage from "../assets/Whipple supercharger.jpg";
+import ossaMotorcycleImage from "../assets/Ossa Trials Motorcycle 1970s.jpg";
+import geidelPoweredImage from "../assets/Powered by Geidel.jpg";
 
 const testimonials = [
   {
@@ -6,7 +12,7 @@ const testimonials = [
     name: "Michael Rodriguez",
     role: "Professional Cyclist",
     company: "Team Velocity Racing",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    image: ossaMotorcycleImage,
     quote: "The carbon fiber frame from Velocity Parts gave me the competitive edge I needed. Lightweight yet incredibly strong - perfect for racing conditions."
   },
   {
@@ -14,7 +20,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Automotive Engineer",
     company: "Premier Auto Works",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
+    image: turbochargerImage,
     quote: "Their precision-engineered brake components have become our go-to choice for high-performance vehicles. Consistent quality and timely delivery."
   },
   {
@@ -22,7 +28,7 @@ const testimonials = [
     name: "David Chen",
     role: "Bike Shop Owner",
     company: "Urban Cycles",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    image: oilPumpImage,
     quote: "Our customers love the custom parts we get from Velocity Parts. The attention to detail and finish quality is unmatched in the industry."
   },
   {
@@ -30,7 +36,7 @@ const testimonials = [
     name: "Jennifer Williams",
     role: "Fleet Manager",
     company: "Metro Delivery Services",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
+    image: geidelPoweredImage,
     quote: "Switching to Velocity Parts for our commercial vehicle components reduced our maintenance costs by 30%. Their durability is impressive."
   }
 ];

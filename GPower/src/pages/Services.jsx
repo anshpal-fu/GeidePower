@@ -1,6 +1,7 @@
 import ServiceCard from "../components/ServiceCard";
 import { SERVICES } from "../utils/constants";
 import { motion } from "framer-motion";
+import facilityImage from "../assets/5 Stage dry sump oil pump.jpg";
 
 export default function Services(){
   return (
@@ -24,7 +25,7 @@ export default function Services(){
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-        {SERVICES.map((s, i) => <ServiceCard key={s.id} index={i} title={s.title} desc={s.desc} />)}
+        {SERVICES.map((s, i) => <ServiceCard key={s.id} service={s} />)}
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
@@ -34,7 +35,7 @@ export default function Services(){
           transition={{duration:0.5}}
         >
           <img 
-            src="https://images.unsplash.com/photo-1504390425510-7ffc297e8931?q=80&w=800&auto=format&fit=crop" 
+            src={facilityImage} 
             alt="Advanced Manufacturing Facility" 
             className="rounded-2xl shadow-xl"
           />

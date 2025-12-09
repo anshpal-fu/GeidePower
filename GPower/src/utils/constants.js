@@ -1,9 +1,9 @@
 export const CONTACT = {
-  company: "Velocity Parts Co.",
+  company: "Geidel Power",
   address: "123 Innovation Drive, Tech Park, CA 94103",
   phone: "(888) 341-7454",
-  domainPreferred: "velocityparts.com",
-  domainBackup: "velocity-manufacturing.com",
+  domainPreferred: "geidelpower.com",
+  domainBackup: "geidel-power.com",
   year: new Date().getFullYear()
 };
 

@@ -1,4 +1,10 @@
 import { motion } from "framer-motion";
+import crankshaftImage from "../assets/Crankshaft - six cylinders seven mains.jpg";
+import oilPumpImage from "../assets/Wet sump oil pump.jpg";
+import turbochargerImage from "../assets/Turbocharger with waste gate.jpg";
+import superchargerImage from "../assets/Whipple supercharger.jpg";
+import ossaMotorcycleImage from "../assets/Ossa Trials Motorcycle 1970s.jpg";
+import geidelPoweredImage from "../assets/Powered by Geidel.jpg";
 
 const blogPosts = [
   {
@@ -7,7 +13,7 @@ const blogPosts = [
     excerpt: "Exploring how advances in carbon fiber technology are revolutionizing bike performance and accessibility.",
     date: "December 5, 2025",
     author: "Alex Morgan",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+    image: ossaMotorcycleImage,
     category: "Industry Insights"
   },
   {
@@ -16,7 +22,7 @@ const blogPosts = [
     excerpt: "How modern materials and design are improving stopping power, durability, and safety in vehicles.",
     date: "November 28, 2025",
     author: "Jamie Chen",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop",
+    image: turbochargerImage,
     category: "Technical"
   },
   {
@@ -25,7 +31,7 @@ const blogPosts = [
     excerpt: "How Velocity Parts is reducing environmental impact while maintaining precision manufacturing standards.",
     date: "November 20, 2025",
     author: "Taylor Williams",
-    image: "https://images.unsplash.com/photo-1545997945-70ed5d20c6ff?q=80&w=800&auto=format&fit=crop",
+    image: geidelPoweredImage,
     category: "Company News"
   },
   {
@@ -34,7 +40,7 @@ const blogPosts = [
     excerpt: "A guide to understanding aluminum, titanium, and steel properties for off-road performance.",
     date: "November 12, 2025",
     author: "Jordan Smith",
-    image: "https://images.unsplash.com/photo-1507151230097-015838b9cb77?q=80&w=800&auto=format&fit=crop",
+    image: oilPumpImage,
     category: "Materials"
   },
   {
@@ -43,7 +49,7 @@ const blogPosts = [
     excerpt: "How EV adoption is creating new opportunities for specialized automotive components.",
     date: "November 5, 2025",
     author: "Casey Johnson",
-    image: "https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=800&auto=format&fit=crop",
+    image: superchargerImage,
     category: "Market Trends"
   },
   {
@@ -52,7 +58,7 @@ const blogPosts = [
     excerpt: "Our approach to ensuring every part meets exacting standards before reaching customers.",
     date: "October 28, 2025",
     author: "Morgan Lee",
-    image: "https://images.unsplash.com/photo-1543082558-485707dae1f4?q=80&w=800&auto=format&fit=crop",
+    image: crankshaftImage,
     category: "Process"
   }
 ];
