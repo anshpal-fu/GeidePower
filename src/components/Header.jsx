@@ -30,8 +30,6 @@ export default function Header(){
           <Link to="/services" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Services</Link>
           <Link to="/products" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Products</Link>
           <Link to="/portfolio" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/portfolio" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Portfolio</Link>
-          <Link to="/testimonials" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/testimonials" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Testimonials</Link>
-          <Link to="/faq" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/faq" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>FAQ</Link>
           <Link to="/blog" className={`hover:text-[var(--color-primary)] transition-all duration-300 ${loc.pathname === "/blog" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"}`}>Blog</Link>
           <button 
             onClick={toggleTheme}

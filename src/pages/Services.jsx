@@ -25,7 +25,11 @@ export default function Services(){
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-        {SERVICES.map((s, i) => <ServiceCard key={s.id} service={s} />)}
+        {SERVICES.map((s, i) => (
+          <div key={s.id} className="flex">
+            <ServiceCard service={s} />
+          </div>
+        ))}
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
@@ -37,7 +41,7 @@ export default function Services(){
           <img 
             src={facilityImage} 
             alt="Advanced Manufacturing Facility" 
-            className="rounded-2xl shadow-xl"
+            className="rounded-2xl"
           />
         </motion.div>
         

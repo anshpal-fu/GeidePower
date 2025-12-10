@@ -6,7 +6,7 @@ export default function Hero(){
   const { isAltTheme } = useTheme();
   
   return (
-    <section className="gradient-bg py-24 md:py-32 relative overflow-hidden">
+    <section className="gradient-bg py-24 md:py-10 relative overflow-hidden">
       {/* Animated decorative elements */}
       <motion.div 
         className={`absolute top-20 right-20 w-64 h-64 rounded-full mix-blend-multiply filter blur-3xl opacity-20 ${isAltTheme ? 'bg-[var(--color-primary)]' : 'bg-[var(--color-secondary)]'}`}
@@ -97,10 +97,10 @@ export default function Hero(){
                   ease: "easeInOut"
                 }}
               ></motion.div>
-              <div className="relative bg-white rounded-2xl shadow-2xl p-6 border border-gray-100 z-10">
+              <div className="relative bg-white rounded-2xl p-6 border border-gray-100 z-10 max-w-xs">
                 <motion.img 
-                  src={crankshaftImage} 
-                  alt="Precision Engineered Bike & Car Parts" 
+                  src={crankshaftImage}
+                  alt="Precision Engineered Bike & Car Parts"
                   className="w-full h-auto object-contain rounded-lg"
                   whileHover={{ scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300 }}

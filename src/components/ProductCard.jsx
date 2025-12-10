@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
     <motion.div 
       whileHover={{ y: -10, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 card-border h-full"
+      className="bg-white rounded-2xl overflow-hidden border border-gray-100 card-border h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -23,10 +23,6 @@ export default function ProductCard({ product }) {
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.5 }}
         />
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300"
-          whileHover={{ opacity: 1 }}
-        ></motion.div>
       </div>
       <div className="p-6">
         <motion.h3 
