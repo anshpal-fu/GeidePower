@@ -5,7 +5,7 @@ import facilityImage from "../assets/5 Stage dry sump oil pump.jpg";
 
 export default function Services(){
   return (
-    <div className="container mx-auto px-6 py-20">
+    <div className="container mx-auto px-6 py-20 bg-gradient-to-br from-[#ADD8E6] to-[#E0F0FF] rounded-3xl p-8 md:p-16">
       <div className="text-center mb-16">
         <motion.h1 
           initial={{opacity:0, y:20}} 
@@ -26,7 +26,7 @@ export default function Services(){
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
         {SERVICES.map((s, i) => (
-          <div key={s.id} className="flex">
+          <div key={s.id} className="flex h-full">
             <ServiceCard service={s} />
           </div>
         ))}

@@ -2,31 +2,33 @@ import { motion } from "framer-motion";
 import defaultImage from "../assets/19jpg/Diamond piston with teflon skirt.jpg";
 
 export default function ProductCard({ product }) {
-  // Use the product image if available, otherwise use default
   const imageSrc = product.image || defaultImage;
-  
+
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ y: -10, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-white rounded-2xl overflow-hidden border border-gray-100 card-border h-full"
+      className="bg-white rounded-2xl overflow-hidden border border-gray-100 card-border h-full
+                 max-w-full sm:max-w-sm mx-auto"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+      transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}
     >
-      <div className="h-48 overflow-hidden relative">
-        <motion.img 
-          src={imageSrc} 
-          alt={product.name} 
-          className="w-full h-full object-cover transition-transform duration-500"
+      {/* Image */}
+      <div className="h-40 sm:h-48 overflow-hidden relative">
+        <motion.img
+          src={imageSrc}
+          alt={product.name}
+          className="w-full h-full object-contain p-3 sm:p-0 transition-transform duration-500"
           whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.5 }}
         />
       </div>
-      <div className="p-6">
-        <motion.h3 
-          className="text-xl font-bold text-[var(--color-primary)] mb-3"
+
+      {/* Content */}
+      <div className="p-4 sm:p-6">
+        <motion.h3
+          className="text-lg sm:text-xl font-bold text-[var(--color-primary)] mb-2 sm:mb-3 leading-tight"
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -34,8 +36,9 @@ export default function ProductCard({ product }) {
         >
           {product.name}
         </motion.h3>
-        <motion.p 
-          className="text-gray-600 mb-4"
+
+        <motion.p
+          className="text-gray-600 text-sm sm:text-base mb-4"
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -43,9 +46,10 @@ export default function ProductCard({ product }) {
         >
           {product.desc}
         </motion.p>
-        <motion.a 
-          href="/contact" 
-          className="text-[var(--color-secondary)] font-bold hover:underline inline-flex items-center"
+
+        <motion.a
+          href="/contact"
+          className="text-[#FFD447] font-bold hover:underline inline-flex items-center text-sm sm:text-base"
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -53,7 +57,13 @@ export default function ProductCard({ product }) {
           whileHover={{ x: 5 }}
         >
           Inquire Now
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4 ml-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </motion.a>

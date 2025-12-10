@@ -40,7 +40,7 @@ export default function Products(){
   });
 
   return (
-    <div className="container mx-auto px-6 py-20">
+    <div className="container mx-auto px-6 py-20 bg-gradient-to-br from-[#ADD8E6] to-[#E0F0FF] rounded-3xl p-8 md:p-16">
       <div className="text-center mb-16">
         <motion.h1 
           initial={{opacity:0, y:20}} 
@@ -59,13 +59,14 @@ export default function Products(){
         </motion.p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 justify-items-center">
         {productsWithImages.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{opacity:0, y:20}}
             whileInView={{opacity:1, y:0}}
             transition={{delay: index * 0.1}}
+            className="w-full max-w-sm"
           >
             <ProductCard product={product} />
           </motion.div>

@@ -16,9 +16,16 @@ export const SERVICES = [
 
 export const PRODUCTS = [
   { id: 1, name: "Carbon Fiber Bike Frame", image: "", desc: "Ultra-lightweight frame designed for competitive cycling with aerodynamic profiling." },
-  { id: 2, name: "Performance Brake Calipers", image: "", desc: "High-efficiency calipers for sports cars with superior heat dissipation." },
-  { id: 3, name: "Alloy Wheel Set", image: "", desc: "Lightweight forged alloy wheels for both bikes and cars with customizable finishes." },
+  { id: 2, name: "Performance Brake Calipers", image: "", desc: "High-efficiency performance calipers for modern sports cars with enhanced heat dissipation." },
+  { id: 3, name: "Alloy Wheel Set", image: "", desc: "Lightweight forged alloy wheels for both bikes and cars with fully customizable finishes." },
   { id: 4, name: "Engine Mounting System", image: "", desc: "Precision-engineered mounting solutions for high-performance automotive engines." },
   { id: 5, name: "Suspension Components", image: "", desc: "Custom suspension parts for mountain bikes and off-road vehicles." },
-  { id: 6, name: "Exhaust Manifold", image: "", desc: "Stainless steel exhaust manifolds optimized for turbocharged engines." }
+  { id: 6, name: "Exhaust Manifold", image: "", desc: "Stainless steel exhaust manifolds optimized for turbocharged engines." },
+  // Portfolio items added to products
+  { id: 7, name: "Turbocharger Housing", image: "", desc: "Precision-machined turbocharger housing designed for maximum performance and long-lasting durability." },
+  { id: 8, name: "Mountain Bike Suspension Fork", image: "", desc: "Advanced suspension fork system engineered for extreme off-road performance and superior control."},
+  // Additional portfolio items
+  { id: 9, name: "Performance Brake Caliper Set", image: "", desc: "High-efficiency performance calipers for modern sports cars with enhanced heat dissipation and precision braking." },
+  { id: 10, name: "Forged Alloy Wheel Set", image: "", desc: "Lightweight forged alloy wheels for both bikes and cars with fully customizable finishes and superior strength." },
+  { id: 11, name: "Engine Mounting System Pro", image: "", desc: "Advanced precision-engineered mounting solutions for high-performance automotive engines with vibration dampening." }
 ];

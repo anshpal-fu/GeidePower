@@ -35,7 +35,7 @@ export default function Hero(){
       ></motion.div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="py-5 grid md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

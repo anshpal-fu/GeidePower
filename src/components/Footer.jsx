@@ -52,7 +52,7 @@ export default function Footer(){
             <li><a href="/about" className="hover:text-[var(--color-secondary)] transition">About Us</a></li>
             <li><a href="/services" className="hover:text-[var(--color-secondary)] transition">Services</a></li>
             <li><a href="/products" className="hover:text-[var(--color-secondary)] transition">Products</a></li>
-            <li><a href="/portfolio" className="hover:text-[var(--color-secondary)] transition">Portfolio</a></li>
+            {/* <li><a href="/portfolio" className="hover:text-[var(--color-secondary)] transition">Portfolio</a></li> */}
           </ul>
         </div>
 

@@ -29,7 +29,7 @@ export default function ServiceCard({ service }) {
         <motion.img 
           src={imageSrc} 
           alt={service.title} 
-          className="w-full h-full object-cover transition-transform duration-500"
+          className="w-full h-full object-contain transition-transform duration-500"
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.5 }}
         />
@@ -55,7 +55,7 @@ export default function ServiceCard({ service }) {
         </motion.p>
         <motion.a 
           href="/contact" 
-          className="text-[var(--color-secondary)] font-bold hover:underline inline-flex items-center mt-auto"
+          className="text-[#FFD447] font-bold hover:underline inline-flex items-center mt-auto"
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
