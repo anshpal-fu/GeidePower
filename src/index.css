@@ -16,8 +16,14 @@
   }
   
   .btn-accent {
-    @apply bg-[var(--color-secondary)] text-[var(--color-dark)] px-6 py-3 rounded-lg font-bold hover:bg-[#e6bf3e] transition duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-[#dcaf2c] text-[var(--color-dark)] px-6 py-3 rounded-lg font-bold 
+          transition duration-300 shadow-lg;
   }
+
+  .btn-accent:hover {
+    @apply scale-105 shadow-[0_0_15px_#f5d76e];
+  }
+
   
   .btn-secondary {
     @apply bg-white border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-6 py-3 rounded-lg font-bold hover:bg-[var(--color-primary)] hover:text-white transition duration-300;
@@ -36,6 +42,17 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
 
 body {
@@ -49,20 +66,17 @@ body {
   color: var(--color-dark);
 }
 
-/* Custom scrollbar */
+/* Completely hide scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-light);
+/* For IE and Edge */
+body {
+  -ms-overflow-style: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary);
+/* For Firefox */
+body {
+  scrollbar-width: none;
 }

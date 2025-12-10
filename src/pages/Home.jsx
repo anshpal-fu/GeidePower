@@ -229,44 +229,51 @@ export default function Home() {
 
       {/* CTA Section */}
       <motion.section 
-        className="py-20 bg-[var(--color-accent)]"
+        className="py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="container mx-auto px-6 text-center">
-          <motion.h2 
+        <div className="container mx-auto px-6">
+          <motion.div 
             initial={{opacity:0, y:20}} 
             whileInView={{opacity:1, y:0}} 
             viewport={{once:true}}
-            className="text-4xl font-bold text-[var(--color-primary)] mb-6"
+            className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-3xl p-16 text-center text-white"
           >
-            Ready to Get Started?
-          </motion.h2>
-          <motion.p 
-            initial={{opacity:0, y:20}} 
-            whileInView={{opacity:1, y:0}} 
-            viewport={{once:true}}
-            transition={{delay:0.2}}
-            className="text-xl text-gray-700 max-w-3xl mx-auto mb-10"
-          >
-            Contact us today for a consultation on your bike or car parts manufacturing needs.
-          </motion.p>
-          <motion.div
-            initial={{opacity:0, y:20}} 
-            whileInView={{opacity:1, y:0}} 
-            viewport={{once:true}}
-            transition={{delay:0.4}}
-          >
-            <motion.a 
-              href="/contact" 
-              className="btn-accent inline-block px-8 py-4 text-lg"
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
+            <motion.h2 
+              initial={{opacity:0, y:20}} 
+              whileInView={{opacity:1, y:0}} 
+              viewport={{once:true}}
+              className="text-4xl font-bold mb-6"
             >
-              Request a Quote
-            </motion.a>
+              Ready to Start Your Project?
+            </motion.h2>
+            <motion.p 
+              initial={{opacity:0, y:20}} 
+              whileInView={{opacity:1, y:0}} 
+              viewport={{once:true}}
+              transition={{delay:0.2}}
+              className="text-xl text-gray-300 max-w-3xl mx-auto mb-10"
+            >
+              Contact our team today to discuss your bike or car parts manufacturing needs.
+            </motion.p>
+            <motion.div
+              initial={{opacity:0, y:20}} 
+              whileInView={{opacity:1, y:0}} 
+              viewport={{once:true}}
+              transition={{delay:0.4}}
+            >
+              <motion.a 
+                href="/contact" 
+                className="btn-accent inline-block"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get in Touch
+              </motion.a>
+            </motion.div>
           </motion.div>
         </div>
       </motion.section>
@@ -300,7 +307,7 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
             {[
               {
                 id: 1,
@@ -340,7 +347,7 @@ export default function Home() {
                 <div className="flex text-[var(--color-secondary)] mt-4">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
@@ -390,7 +397,7 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-2 gap-6 mb-12">
             {[
               {
                 id: 1,
@@ -401,6 +408,16 @@ export default function Home() {
                 id: 2,
                 question: "What is your typical turnaround time?",
                 answer: "Turnaround times vary based on project complexity and volume. Simple prototypes can be completed in 2-3 weeks, while larger production runs typically take 4-6 weeks. We always work with clients to meet their deadlines and offer expedited services for urgent projects."
+              },
+              {
+                id: 3,
+                question: "Do you offer design assistance?",
+                answer: "Absolutely! Our engineering team provides comprehensive design support, from initial concept development to final production-ready designs. We can help optimize your parts for manufacturability, performance, and cost-effectiveness."
+              },
+              {
+                id: 4,
+                question: "What quality standards do you maintain?",
+                answer: "We adhere to stringent quality standards including ISO 9001 certification. Every part undergoes rigorous inspection using coordinate measuring machines (CMM) and other precision measurement tools. We maintain detailed quality documentation for all our products."
               }
             ].map((faq, index) => (
               <motion.div
@@ -408,16 +425,16 @@ export default function Home() {
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
                 transition={{delay: index * 0.1}}
-                className="mb-4 border border-gray-200 rounded-xl overflow-hidden"
+                className="border border-gray-200 rounded-xl overflow-hidden h-full"
               >
-                <div className="w-full px-8 py-6 text-left flex justify-between items-center bg-white hover:bg-[var(--color-accent)] transition">
-                  <h3 className="text-xl font-bold text-[var(--color-dark)]">{faq.question}</h3>
-                  <div className="text-[var(--color-primary)] text-2xl">
+                <div className={`px-6 py-4 text-left flex justify-between items-center transition ${index % 2 === 0 ? 'bg-white hover:bg-[var(--color-accent)]' : 'bg-gray-50 hover:bg-[var(--color-secondary)]'}`}>
+                  <h3 className="text-lg font-bold text-[var(--color-dark)]">{faq.question}</h3>
+                  <div className="text-[var(--color-primary)] text-xl">
                     +
                   </div>
                 </div>
-                <div className="px-8 py-6 bg-gray-50 border-t border-gray-200">
-                  <p className="text-gray-700 text-lg">{faq.answer}</p>
+                <div className={`px-6 py-4 border-t border-gray-200 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+                  <p className="text-gray-700">{faq.answer}</p>
                 </div>
               </motion.div>
             ))}

@@ -40,7 +40,7 @@ export default function Products(){
   });
 
   return (
-    <div className="container mx-auto px-6 py-20 bg-gradient-to-br from-[#ADD8E6] to-[#E0F0FF] rounded-3xl p-8 md:p-16">
+    <div className="container mx-auto px-6 py-20 bg-gradient-to-br from-[#ADD8E6] to-[#E0F0FF] p-8 md:p-16">
       <div className="text-center mb-16">
         <motion.h1 
           initial={{opacity:0, y:20}} 
@@ -79,11 +79,11 @@ export default function Products(){
         transition={{duration:0.5}}
         className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-3xl p-16 text-center text-white"
       >
-        <h2 className="text-4xl font-bold mb-6">Need a Custom Solution?</h2>
+        <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-          Our engineering team can create bespoke components tailored to your exact specifications.
+          Contact our team today to discuss your bike or car parts manufacturing needs.
         </p>
-        <a href="/contact" className="btn-accent inline-block">Request Custom Quote</a>
+        <a href="/contact" className="btn-accent inline-block">Get in Touch</a>
       </motion.div>
     </div>
   );

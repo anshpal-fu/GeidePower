@@ -22,9 +22,9 @@ export default function About() {
   ];
 
   return (
-    <div className="container mx-auto px-6 py-10">
+    <div className="w-full mx-auto px-0 py-0 relative z-10 ">
       {/* Our Story Section with Light Blue Background */}
-      <div className="bg-gradient-to-br from-[#ADD8E6] to-[#E0F0FF] rounded-3xl p-8 md:p-16 mb-20">
+      <div className="bg-gradient-to-br from-[#ADD8E6] to-[#E0F0FF]  md:p-10 mb-0">
         <div className="text-center mb-16">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} 
@@ -75,8 +75,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative"
           >
-            <div className="absolute -top-6 -right-6 w-full h-full bg-gradient-to-br from-[#FFF5CC] to-[#FFF9E6] rounded-2xl z-0"></div>
-            <div className="relative bg-white rounded-2xl shadow-xl p-6 border border-gray-100 z-10">
+            <div className="absolute -top-6 -right-6 w-full h-full bg-gradient-to-br from-[#FFF5CC] to-[#FFF9E6] rounded-3xl z-0"></div>
+            <div className="relative bg-white rounded-3xl shadow-xl p-6 border border-gray-100 z-10">
               <img 
                 src={teamImage} 
                 alt="Geidel Power Team" 
@@ -88,11 +88,11 @@ export default function About() {
       </div>
 
       {/* Core Values Section with Light Yellow Background */}
-      <div className="bg-gradient-to-br from-[#FFF5CC] to-[#FFF9E6] rounded-3xl p-8 md:p-16 mb-20">
+      <div className="bg-gradient-to-br bg-[#ffffff] pb-5">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }} 
           whileInView={{ opacity: 1, y: 0 }} 
-          className="text-4xl font-bold text-[var(--color-primary)] text-center mb-16"
+          className="text-4xl font-bold text-[var(--color-primary)] text-center p-5 mb-16"
         >
           Our Core Values
         </motion.h2>
@@ -104,26 +104,26 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg text-center h-full"
+              className="bg-gradient-to-br from-[#F5F9FD] to-[#E6F0FA] rounded-2xl p-8 border border-gray-100 shadow-lg text-center h-full"
             >
-              <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[var(--color-primary)] to-[#002a52] flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[#ADD8E6] to-[#B0D4EB] flex items-center justify-center mx-auto mb-6">
                 {index === 0 && (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 )}
                 {index === 1 && (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 )}
                 {index === 2 && (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 )}
                 {index === 3 && (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 )}
@@ -140,10 +140,10 @@ export default function About() {
         initial={{ opacity: 0, y: 20 }} 
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-r from-[#ADD8E6] to-[#FFF5CC] rounded-3xl p-16 text-center"
+        className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-3xl p-16 text-center text-white"
       >
-        <h2 className="text-4xl font-bold mb-6 text-[var(--color-primary)]">Ready to Partner With Us?</h2>
-        <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+        <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
           Contact our team today to discuss your bike or car parts manufacturing needs.
         </p>
         <a href="/contact" className="btn-accent inline-block">Get in Touch</a>
