@@ -3,7 +3,7 @@
 
 @theme {
   --color-primary: #003B73; /* Deep Blue */
-  --color-secondary: #FFD447; /* Vibrant Yellow */
+  --color-secondary: #FFF5CC; /* Light Yellow - less bright than #FFD447 */
   --color-accent: #E6F0FA; /* Light Blue */
   --color-dark: #1A1F25; /* Dark Gray */
   --color-light: #F8F9FA; /* Light Gray */
