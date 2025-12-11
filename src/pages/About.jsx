@@ -24,7 +24,7 @@ export default function About() {
   return (
     <div className="w-full mx-auto px-0 py-0 relative z-10 ">
       {/* Our Story Section with Light Blue Background */}
-      <div className="bg-gradient-to-br from-[#ADD8E6] to-[#E0F0FF]  md:p-10 mb-0">
+      <div className="bg-[radial-gradient(circle_at_top_right,_#FFFFFF_0%,_#F7FBFF_40%,_#EEF6FF_100%)] py-10">
         <div className="text-center mb-16">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} 
@@ -140,7 +140,7 @@ export default function About() {
         initial={{ opacity: 0, y: 20 }} 
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-3xl p-16 text-center text-white"
+        className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52]  p-16 text-center text-white"
       >
         <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">

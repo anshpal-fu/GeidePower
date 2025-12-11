@@ -15,7 +15,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col font-sans bg-white text-gray-900">
+      <div className="min-h-screen flex flex-col font-sans text-gray-900">
         <Header />
         <main className="flex-1">
           <Routes>

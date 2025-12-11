@@ -216,7 +216,7 @@ export default function Home() {
 
       {/* Manufacturing Process */}
       <motion.section 
-        className="py-20 bg-[var(--color-secondary)]"
+        className="py-20 bg-gradient-to-b from-[#FFFDF5] to-[#FFF4CC]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -370,7 +370,7 @@ export default function Home() {
 
       {/* FAQ Section */}
       <motion.section 
-        className="py-20 bg-[var(--color-secondary)]"
+        className="py-20 bg-gradient-to-b from-[#FFFDF5] to-[#FFF4CC]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

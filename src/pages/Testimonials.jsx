@@ -43,8 +43,8 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="container mx-auto px-6 py-20">
-      <div className="text-center mb-16">
+    <div className="w-full bg-[radial-gradient(ellipse_at_top_right,#ffffff_0%,#f7fbff_40%,#eef6ff_100%)] min-h-screen">
+      <div className="container mx-auto px-6 py-20">
         <motion.h1 
           initial={{opacity:0, y:20}} 
           animate={{opacity:1, y:0}} 
