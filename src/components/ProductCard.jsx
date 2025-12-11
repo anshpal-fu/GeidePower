@@ -6,29 +6,30 @@ export default function ProductCard({ product }) {
 
   return (
     <motion.div
-      whileHover={{ y: -10, scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className="bg-white rounded-2xl overflow-hidden border border-gray-100 card-border h-full
-                 max-w-full sm:max-w-sm mx-auto"
+      whileHover={{ y: -8, scale: 1.015 }}
+      whileTap={{ scale: 0.97 }}
+      className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg
+                 transition-all h-full max-w-full sm:max-w-sm mx-auto"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}
+      transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
     >
       {/* Image */}
-      <div className="h-40 sm:h-48 overflow-hidden relative">
-        <motion.img
-          src={imageSrc}
-          alt={product.name}
-          className="w-full h-full object-contain p-3 sm:p-0 transition-transform duration-500"
-          whileHover={{ scale: 1.1 }}
-        />
+      <div className="h-40 sm:h-48 flex items-center justify-center overflow-hidden relative bg-white">
+        <motion.div whileHover={{ scale: 1.1 }} className="w-full h-full flex items-center justify-center">
+          <img
+            src={imageSrc}
+            alt={product.name}
+            className="object-contain p-3 sm:p-2 w-full h-full"
+          />
+        </motion.div>
       </div>
 
       {/* Content */}
       <div className="p-4 sm:p-6">
         <motion.h3
-          className="text-lg sm:text-xl font-bold text-[var(--color-primary)] mb-2 sm:mb-3 leading-tight"
+          className="text-lg sm:text-xl font-bold text-[var(--color-primary)] mb-2 leading-tight"
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -47,25 +48,31 @@ export default function ProductCard({ product }) {
           {product.desc}
         </motion.p>
 
+        {/* Button */}
         <motion.a
           href="/contact"
-          className="text-[#FFD447] font-bold hover:underline inline-flex items-center text-sm sm:text-base"
+          className="text-[#FFD447] font-bold inline-flex items-center group text-sm sm:text-base"
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          whileHover={{ x: 5 }}
         >
           Inquire Now
-          <svg
+          <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4 ml-1"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            whileHover={{ x: 4 }}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M9 5l7 7-7 7" 
+            />
+          </motion.svg>
         </motion.a>
       </div>
     </motion.div>

@@ -14,6 +14,7 @@ export const SERVICES = [
   { id: 4, title: "Quality Assurance", desc: "Comprehensive testing and inspection services to ensure every part meets exacting standards." }
 ];
 
+// Note: Image properties will be populated in the Products.jsx component based on product names
 export const PRODUCTS = [
   { id: 1, name: "Carbon Fiber Bike Frame", image: "", desc: "Ultra-lightweight frame designed for competitive cycling with aerodynamic profiling." },
   { id: 2, name: "Performance Brake Calipers", image: "", desc: "High-efficiency performance calipers for modern sports cars with enhanced heat dissipation." },

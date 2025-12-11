@@ -1,118 +1,142 @@
-import ContactForm from "../components/ContactForm";
-import { CONTACT } from "../utils/constants";
 import { motion } from "framer-motion";
+import crankshaftImage from "../assets/Crankshaft - six cylinders seven mains.jpg";
+import oilPumpImage from "../assets/Wet sump oil pump.jpg";
+import turbochargerImage from "../assets/Turbocharger with waste gate.jpg";
+import superchargerImage from "../assets/Whipple supercharger.jpg";
+import ossaMotorcycleImage from "../assets/Ossa Trials Motorcycle 1970s.jpg";
+import geidelPoweredImage from "../assets/Powered by Geidel.jpg";
 
-export default function Contact(){
+const blogPosts = [
+  {
+    id: 1,
+    title: "The Future of Carbon Fiber in Bicycle Manufacturing",
+    excerpt: "Exploring how advances in carbon fiber technology are revolutionizing bike performance and accessibility.",
+    date: "December 5, 2025",
+    author: "Alex Morgan",
+    image: ossaMotorcycleImage,
+    category: "Industry Insights",
+  },
+  {
+    id: 2,
+    title: "5 Innovations in Automotive Brake Systems",
+    excerpt: "How modern materials and design are improving stopping power, durability, and safety in vehicles.",
+    date: "November 28, 2025",
+    author: "Jamie Chen",
+    image: turbochargerImage,
+    category: "Technical",
+  },
+  {
+    id: 3,
+    title: "Sustainable Manufacturing: Our Commitment to Green Production",
+    excerpt: "How Velocity Parts is reducing environmental impact while maintaining precision manufacturing standards.",
+    date: "November 20, 2025",
+    author: "Taylor Williams",
+    image: geidelPoweredImage,
+    category: "Company News",
+  },
+  {
+    id: 4,
+    title: "Choosing the Right Alloy for Mountain Bike Components",
+    excerpt: "A guide to understanding aluminum, titanium, and steel properties for off-road performance.",
+    date: "November 12, 2025",
+    author: "Jordan Smith",
+    image: oilPumpImage,
+    category: "Materials",
+  },
+  {
+    id: 5,
+    title: "The Rise of Electric Vehicle Custom Parts Market",
+    excerpt: "How EV adoption is creating new opportunities for specialized automotive components.",
+    date: "November 5, 2025",
+    author: "Casey Johnson",
+    image: superchargerImage,
+    category: "Market Trends",
+  },
+  {
+    id: 6,
+    title: "Quality Control in Precision Manufacturing",
+    excerpt: "Our approach to ensuring every part meets exacting standards before reaching customers.",
+    date: "October 28, 2025",
+    author: "Morgan Lee",
+    image: crankshaftImage,
+    category: "Process",
+  },
+];
+
+export default function Blog() {
   return (
-    <div className="container mx-auto px-6 py-20">
-      <div className="text-center mb-16">
-        <motion.h1 
-          initial={{opacity:0, y:20}} 
-          animate={{opacity:1, y:0}} 
-          className="text-5xl font-bold text-[var(--color-primary)] mb-6"
+    <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+      {/* Header */}
+      <div className="text-center mb-12 sm:mb-16">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-3xl sm:text-5xl font-bold text-[var(--color-primary)] mb-4 sm:mb-6"
         >
-          Contact Our Team
+          Industry Insights & News
         </motion.h1>
-        <motion.p 
-          initial={{opacity:0, y:20}} 
-          animate={{opacity:1, y:0}} 
-          transition={{delay:0.2}}
-          className="text-xl text-gray-600 max-w-3xl mx-auto"
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-md sm:text-xl text-gray-600 max-w-3xl mx-auto px-2"
         >
-          Reach out to our experts for inquiries, quotes, or to discuss your manufacturing requirements.
+          Stay informed with the latest trends, innovations, and company updates in bike and car parts manufacturing.
         </motion.p>
       </div>
-      
-      <div className="grid lg:grid-cols-2 gap-16 mb-20">
-        <motion.div 
-          initial={{opacity:0, x:-20}} 
-          animate={{opacity:1, x:0}} 
-          transition={{duration:0.5}}
-          className="bg-gradient-to-br from-[var(--color-accent)] to-white rounded-2xl p-10 border border-gray-100 shadow-lg"
-        >
-          <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-8">Contact Information</h2>
-          
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-[var(--color-secondary)] flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--color-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[var(--color-dark)] mb-1">Phone</h3>
-                <p className="text-gray-700 text-lg">{CONTACT.phone}</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-[var(--color-secondary)] flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--color-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[var(--color-dark)] mb-1">Email</h3>
-                <p className="text-gray-700 text-lg">info@{CONTACT.domainPreferred}</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-[var(--color-secondary)] flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--color-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[var(--color-dark)] mb-1">Address</h3>
-                <p className="text-gray-700 text-lg">{CONTACT.address}</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-[var(--color-secondary)] flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--color-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[var(--color-dark)] mb-1">Business Hours</h3>
-                <p className="text-gray-700 text-lg">Monday - Friday: 8AM - 6PM</p>
-                <p className="text-gray-700 text-lg">Saturday: 9AM - 1PM</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
-        <motion.div 
-          initial={{opacity:0, x:20}} 
-          animate={{opacity:1, x:0}} 
-          transition={{duration:0.5, delay:0.2}}
-        >
-          <div className="mb-10">
-            <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-2">Get in Touch</h2>
-            <p className="text-gray-600 text-lg">Fill out the form below and our team will contact you within 24 hours.</p>
-          </div>
-          <ContactForm />
-        </motion.div>
+      {/* Blog Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
+        {blogPosts.map((post, index) => (
+          <motion.div
+            key={post.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.08 }}
+            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition"
+          >
+            <div className="h-40 sm:h-48 overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+
+            <div className="p-5 sm:p-6">
+              <div className="flex flex-wrap justify-between items-center mb-3">
+                <span className="bg-[var(--color-secondary)] text-[var(--color-dark)] px-3 py-1 rounded-full text-xs sm:text-sm font-bold mb-2 sm:mb-0">
+                  {post.category}
+                </span>
+                <span className="text-gray-500 text-xs sm:text-sm">{post.date}</span>
+              </div>
+
+              <h3 className="text-lg sm:text-xl font-bold text-[var(--color-dark)] mb-2">
+                {post.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm sm:text-md mb-4">{post.excerpt}</p>
+
+              <div className="flex justify-between items-center">
+                <span className="text-[var(--color-primary)] text-sm sm:text-md font-medium">
+                  By {post.author}
+                </span>
+                <a href="#" className="text-[var(--color-primary)] font-bold hover:underline text-sm sm:text-md">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
-      <motion.div 
-        initial={{opacity:0, y:20}} 
-        whileInView={{opacity:1, y:0}} 
-        transition={{duration:0.5}}
-        className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-3xl p-16 text-center text-white"
-      >
-        <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-          Contact us today to discuss your bike or car parts manufacturing needs.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:{CONTACT.phone}" className="btn-accent">Call Now</a>
-          <a href="mailto:info@{CONTACT.domainPreferred}" className="bg-white text-[var(--color-primary)] px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:bg-gray-100">Email Us</a>
-        </div>
-      </motion.div>
+      {/* Load More Button */}
+      <div className="flex justify-center">
+        <button className="btn-secondary px-6 sm:px-8 py-3 text-sm sm:text-md">
+          Load More Articles
+        </button>
+      </div>
     </div>
-  )
+  );
 }
