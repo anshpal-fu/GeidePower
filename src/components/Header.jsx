@@ -8,7 +8,14 @@ export default function Header() {
 
   // Disable scroll when menu is open (mobile UX improvement)
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "auto";
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [open]);
 
   return (
@@ -85,27 +92,29 @@ export default function Header() {
       {/* Mobile Dropdown */}
       {open && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.25 }}
-          className="md:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-md w-full px-6 py-5 flex flex-col gap-4 overflow-hidden"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="fixed top-[73px] left-0 right-0 md:hidden bg-white/98 backdrop-blur-xl border-b border-gray-200 shadow-lg z-30 max-h-[calc(100vh-73px)] overflow-y-auto"
         >
-          <Link onClick={() => setOpen(false)} to="/" className={`${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg`}>
-            Home
-          </Link>
-          <Link onClick={() => setOpen(false)} to="/about" className={`${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg`}>
-            About
-          </Link>
-          <Link onClick={() => setOpen(false)} to="/services" className={`${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg`}>
-            Services
-          </Link>
-          <Link onClick={() => setOpen(false)} to="/products" className={`${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg`}>
-            Products
-          </Link>
-          <Link onClick={() => setOpen(false)} to="/contact" className={`${loc.pathname === "/contact" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg`}>
-            Contact
-          </Link>
+          <div className="px-6 py-5 flex flex-col gap-4">
+            <Link onClick={() => setOpen(false)} to="/" className={`${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+              Home
+            </Link>
+            <Link onClick={() => setOpen(false)} to="/about" className={`${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+              About
+            </Link>
+            <Link onClick={() => setOpen(false)} to="/services" className={`${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+              Services
+            </Link>
+            <Link onClick={() => setOpen(false)} to="/products" className={`${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+              Products
+            </Link>
+            <Link onClick={() => setOpen(false)} to="/contact" className={`${loc.pathname === "/contact" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+              Contact
+            </Link>
+          </div>
         </motion.div>
       )}
     </>

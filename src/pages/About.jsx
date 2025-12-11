@@ -122,7 +122,7 @@ export default function About() {
         initial={{ opacity: 0, y: 20 }} 
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-3xl px-4 py-12 sm:px-6 py-12 sm:py-16 text-center text-white p-4 sm:p-6"
+        className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-3xl px-4 py-12 sm:px-6 py-12 sm:py-16 text-center text-white p-4 sm:p-6 mb-8 sm:mb-12"
       >
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
           Ready to Start Your Project?

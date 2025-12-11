@@ -269,7 +269,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <motion.section
-        className="py-12 md:py-20"
+        className="py-12 md:py-20 mb-8 md:mb-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
