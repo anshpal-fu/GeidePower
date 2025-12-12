@@ -73,10 +73,6 @@ export default function Header() {
 
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-3">
-            <Link to="/contact" className="btn-accent text-sm px-4 py-2">
-              Contact
-            </Link>
-
             {/* Hamburger Icon */}
             <button 
               onClick={() => setOpen(!open)} 
