@@ -20,6 +20,14 @@ export default function Header() {
 
   return (
     <>
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--color-primary)] focus:text-white focus:rounded-lg"
+      >
+        Skip to main content
+      </a>
+      
       <motion.header
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -44,18 +52,21 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className={`${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300`}>
+          <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
+            <Link to="/" className={`${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300 min-h-[44px] flex items-center`} aria-current={loc.pathname === "/" ? "page" : undefined}>
               Home
             </Link>
-            <Link to="/about" className={`${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300`}>
+            <Link to="/about" className={`${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300 min-h-[44px] flex items-center`} aria-current={loc.pathname === "/about" ? "page" : undefined}>
               About
             </Link>
-            <Link to="/services" className={`${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300`}>
+            <Link to="/services" className={`${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300 min-h-[44px] flex items-center`} aria-current={loc.pathname === "/services" ? "page" : undefined}>
               Services
             </Link>
-            <Link to="/products" className={`${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300`}>
+            <Link to="/products" className={`${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300 min-h-[44px] flex items-center`} aria-current={loc.pathname === "/products" ? "page" : undefined}>
               Products
+            </Link>
+            <Link to="/blog" className={`${loc.pathname === "/blog" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} hover:text-[var(--color-primary)] transition-all duration-300 min-h-[44px] flex items-center`} aria-current={loc.pathname === "/blog" ? "page" : undefined}>
+              Blog
             </Link>
             <Link to="/contact" className="btn-accent">Contact</Link>
           </nav>
@@ -67,7 +78,12 @@ export default function Header() {
             </Link>
 
             {/* Hamburger Icon */}
-            <button onClick={() => setOpen(!open)} className="text-3xl text-[var(--color-primary)]">
+            <button 
+              onClick={() => setOpen(!open)} 
+              className="text-3xl text-[var(--color-primary)] min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded-lg"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
               {open ? (
                 <motion.span
                   initial={{ rotate: -90, opacity: 0 }}
@@ -99,19 +115,22 @@ export default function Header() {
           className="fixed top-[73px] left-0 right-0 md:hidden bg-white/98 backdrop-blur-xl border-b border-gray-200 shadow-lg z-30 max-h-[calc(100vh-73px)] overflow-y-auto"
         >
           <div className="px-6 py-5 flex flex-col gap-4">
-            <Link onClick={() => setOpen(false)} to="/" className={`${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+            <Link onClick={() => setOpen(false)} to="/" className={`${loc.pathname === "/" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-3 text-lg hover:text-[var(--color-primary)] transition-colors min-h-[44px] flex items-center`} aria-current={loc.pathname === "/" ? "page" : undefined}>
               Home
             </Link>
-            <Link onClick={() => setOpen(false)} to="/about" className={`${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+            <Link onClick={() => setOpen(false)} to="/about" className={`${loc.pathname === "/about" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-3 text-lg hover:text-[var(--color-primary)] transition-colors min-h-[44px] flex items-center`} aria-current={loc.pathname === "/about" ? "page" : undefined}>
               About
             </Link>
-            <Link onClick={() => setOpen(false)} to="/services" className={`${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+            <Link onClick={() => setOpen(false)} to="/services" className={`${loc.pathname === "/services" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-3 text-lg hover:text-[var(--color-primary)] transition-colors min-h-[44px] flex items-center`} aria-current={loc.pathname === "/services" ? "page" : undefined}>
               Services
             </Link>
-            <Link onClick={() => setOpen(false)} to="/products" className={`${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+            <Link onClick={() => setOpen(false)} to="/products" className={`${loc.pathname === "/products" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-3 text-lg hover:text-[var(--color-primary)] transition-colors min-h-[44px] flex items-center`} aria-current={loc.pathname === "/products" ? "page" : undefined}>
               Products
             </Link>
-            <Link onClick={() => setOpen(false)} to="/contact" className={`${loc.pathname === "/contact" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-2 text-lg hover:text-[var(--color-primary)] transition-colors`}>
+            <Link onClick={() => setOpen(false)} to="/blog" className={`${loc.pathname === "/blog" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-3 text-lg hover:text-[var(--color-primary)] transition-colors min-h-[44px] flex items-center`} aria-current={loc.pathname === "/blog" ? "page" : undefined}>
+              Blog
+            </Link>
+            <Link onClick={() => setOpen(false)} to="/contact" className={`${loc.pathname === "/contact" ? "text-[var(--color-primary)] font-bold" : "text-gray-700"} py-3 text-lg hover:text-[var(--color-primary)] transition-colors min-h-[44px] flex items-center`} aria-current={loc.pathname === "/contact" ? "page" : undefined}>
               Contact
             </Link>
           </div>

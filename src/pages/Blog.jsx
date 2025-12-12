@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import crankshaftImage from "../assets/Crankshaft - six cylinders seven mains.jpg";
 import oilPumpImage from "../assets/Wet sump oil pump.jpg";
 import turbochargerImage from "../assets/Turbocharger with waste gate.jpg";
@@ -28,7 +29,7 @@ const blogPosts = [
   {
     id: 3,
     title: "Sustainable Manufacturing: Our Commitment to Green Production",
-    excerpt: "How Velocity Parts is reducing environmental impact while maintaining precision manufacturing standards.",
+    excerpt: "How Geidel Power is reducing environmental impact while maintaining precision manufacturing standards.",
     date: "November 20, 2025",
     author: "Taylor Williams",
     image: geidelPoweredImage,
@@ -63,7 +64,15 @@ const blogPosts = [
   },
 ];
 
+const categories = ["All", "Industry Insights", "Technical", "Company News", "Materials", "Market Trends", "Process"];
+
 export default function Blog() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredPosts = selectedCategory === "All" 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
   return (
     <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
       {/* Header */}
@@ -86,21 +95,45 @@ export default function Blog() {
         </motion.p>
       </div>
 
+      {/* Category Filter */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="flex flex-wrap justify-center gap-3 mb-12"
+      >
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-4 py-2 rounded-full text-sm sm:text-base font-medium transition-all ${
+              selectedCategory === category
+                ? "bg-[var(--color-primary)] text-white shadow-lg"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </motion.div>
+
       {/* Blog Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
-        {blogPosts.map((post, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        {filteredPosts.map((post, index) => (
           <motion.div
             key={post.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: index * 0.08 }}
-            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition"
+            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="h-40 sm:h-48 overflow-hidden">
+            <div className="h-48 sm:h-56 overflow-hidden bg-gray-50 flex items-center justify-center">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                className="w-full h-full object-contain p-2 transition-transform duration-500 hover:scale-110"
+                loading="lazy"
               />
             </div>
 
@@ -123,7 +156,7 @@ export default function Blog() {
                   By {post.author}
                 </span>
                 <a href="#" className="text-[var(--color-primary)] font-bold hover:underline text-sm sm:text-md">
-                  Read More
+                  Read More →
                 </a>
               </div>
             </div>
@@ -131,12 +164,30 @@ export default function Blog() {
         ))}
       </div>
 
-      {/* Load More Button */}
-      <div className="flex justify-center">
-        <button className="btn-secondary px-6 sm:px-8 py-3 text-sm sm:text-md">
-          Load More Articles
-        </button>
-      </div>
+      {/* Newsletter CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="bg-gradient-to-r from-[var(--color-primary)] to-[#002a52] rounded-2xl p-8 sm:p-12 text-center text-white mb-8 sm:mb-12"
+      >
+        <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+          Subscribe to Our Newsletter
+        </h3>
+        <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
+          Get the latest industry insights, product updates, and manufacturing tips delivered to your inbox.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="flex-1 px-4 py-3 rounded-lg bg-white/10 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-secondary)] focus:bg-white/20 border border-white/20"
+          />
+          <button className="btn-accent px-6 py-3 whitespace-nowrap">
+            Subscribe Now
+          </button>
+        </div>
+      </motion.div>
     </div>
   );
 }

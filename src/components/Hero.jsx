@@ -6,7 +6,7 @@ export default function Hero() {
   const { isAltTheme } = useTheme();
 
   return (
-    <section className="gradient-bg py-16 md:py-24 relative overflow-hidden">
+    <section className="gradient-bg py-2 md:py-15 relative overflow-hidden">
       
       {/* Decorative BG Elements – scaled down for mobile */}
       <motion.div
