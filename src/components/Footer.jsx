@@ -78,7 +78,7 @@ export default function Footer() {
               placeholder="Your email"
               className="px-4 py-3 w-full rounded-lg sm:rounded-l-lg sm:rounded-r-none text-gray-800 focus:outline-none"
             />
-            <button className="mt-3 sm:mt-0 bg-[var(--color-secondary)] text-[var(--color-dark)] px-4 py-3 rounded-lg sm:rounded-r-lg sm:rounded-l-none font-bold hover:bg-[#e6bf3e] transition">
+            <button className="btn btn-accent">
               Subscribe
             </button>
           </div>
